@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import Image from "next/image";
+
 
 // Definimos la interfaz para los videos obtenidos de la API
 interface Video {
@@ -123,7 +123,7 @@ export default function Home() {
           {videos.map((video, index) => (
             <Card key={index} className="cursor-pointer" onClick={() => playVideo(index)}>
               <CardContent className="flex gap-4 p-2 items-center">
-                <Image
+                <img
                   src={video.snippet.thumbnails.medium.url}
                   alt={video.snippet.title}
                   width={120}
